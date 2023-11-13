@@ -9,7 +9,7 @@ from requests_aws4auth import AWS4Auth
 import urllib.parse
 import json
 
-print("hi")
+print("hi!")
 
 REGION = 'us-east-1'
 HOST = 'search-photos-xzh7hrqko56izsipclb6hdfng4.us-east-1.es.amazonaws.com'
