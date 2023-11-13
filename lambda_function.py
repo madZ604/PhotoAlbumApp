@@ -9,7 +9,7 @@ from requests_aws4auth import AWS4Auth
 import urllib.parse
 import json
 
-print("hi new deployment!!!")
+# TESTING !!!
 
 REGION = 'us-east-1'
 HOST = 'search-photos-xzh7hrqko56izsipclb6hdfng4.us-east-1.es.amazonaws.com'
@@ -76,3 +76,4 @@ def lambda_handler(event, context):
         print(e)
         print('Error getting object {} from bucket {}. Make sure they exist and your bucket is in the same region as this function.'.format(key, bucket))
         raise e
+    
