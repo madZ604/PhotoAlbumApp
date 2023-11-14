@@ -13,9 +13,11 @@ phases:
       - zip -r9 ../deployment_package.zip .
       - cd ..
       - zip -g deployment_package.zip lambda_function.py
-      - aws lambda update-function-code --function-name photos-indexing-1 --zip-file fileb://deployment_package.zip
+      # - aws lambda update-function-code --function-name photos-indexing-1 --zip-file fileb://deployment_package.zip
     artifacts:
       files: 'deployment_package.zip'
+      discard-paths: yes
+      name: BuildArtifact
 
   post_build:
     commands:
