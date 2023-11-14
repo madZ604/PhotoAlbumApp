@@ -52,7 +52,7 @@ def lambda_handler(event, context):
         
         jsonBody = json.dumps(format)
         print(jsonBody)
-        
+        # - aws lambda update-function-code --function-name photos-indexing-1 --zip-file fileb://deployment_package.zip
         url = HOST + '/' + INDEX + '/_doc'
         print(url)
         headers = { "Content-Type": "application/json" }
