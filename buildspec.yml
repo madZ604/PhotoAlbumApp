@@ -15,7 +15,6 @@ phases:
       - zip -g deployment_package.zip lambda_function.py
     artifacts:
       files: 'deployment_package.zip'
-      discard-paths: yes
       name: BuildArtifact
 
   post_build:
