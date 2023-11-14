@@ -13,6 +13,14 @@ phases:
       - zip -r9 ../deployment_package.zip .
       - cd ..
       - zip -g deployment_package.zip lambda_function.py
+    artifacts:
+      files: 'deployment_package.zip'
+  
+  deploy:
+    commands:
+      - echo "Deploying package..."
+      - aws lambda update-function-code --function-name photos-indexing-1 --zip-file fileb://deployment_package.zip
+
   post_build:
     commands:
       - echo "Updating lambda Function..."
