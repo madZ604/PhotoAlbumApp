@@ -14,6 +14,8 @@ HOST = 'search-photos-xzh7hrqko56izsipclb6hdfng4.us-east-1.es.amazonaws.com'
 INDEX = 'photos' #domain name of OS
 SERVICE = 'es'
 
+# TEST
+
 client = boto3.client('lexv2-runtime')
 
 cred = boto3.Session().get_credentials()
