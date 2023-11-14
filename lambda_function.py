@@ -192,4 +192,3 @@ def lambda_handler(event, context):
     
 #   print(result_array)
 #   return result_array
-    
